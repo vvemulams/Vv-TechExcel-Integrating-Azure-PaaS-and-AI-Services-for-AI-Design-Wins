@@ -1,4 +1,4 @@
-@description('Location of the resources')
+@description('eastus')
 param location string = resourceGroup().location
 
 @description('Password for the SQL Server admin user. PLEASE CHANGE THIS BEFORE DEPLOYMENT!')
