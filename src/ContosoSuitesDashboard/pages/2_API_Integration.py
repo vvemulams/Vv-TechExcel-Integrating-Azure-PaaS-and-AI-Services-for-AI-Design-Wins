@@ -40,7 +40,10 @@ def main():
     )
 
     # Display the list of hotels as a drop-down list
-    hotels_json = get_hotels().json()
+    try:
+        hotels_json = get_hotels().json()
+    except Exception as e:
+        print(f"{e}")
     # Reshape hotels to an object with hotelID and hotelName
     hotels = [{"id": hotel["hotelID"], "name": hotel["hotelName"]} for hotel in hotels_json]
     
